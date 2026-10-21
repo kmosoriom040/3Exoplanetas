@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,7 +22,7 @@ st.set_page_config(
 @st.cache_resource
 def init_connection():
     return mysql.connector.connect(
-        host="localhost", # Mantener localhost para la ejecución local
+        host=os.getenv("DB_HOST", "localhost"),
         port=3306,
         user="root",
         password="root",
