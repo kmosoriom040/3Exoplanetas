@@ -1,0 +1,5 @@
+.git
+app_venv
+__pycache__
+*.ipynb
+diagrama_relacional.png
